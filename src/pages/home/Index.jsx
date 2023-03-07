@@ -7,7 +7,6 @@ import AboutUs from "../../components/Main/AboutUs";
 import ImagesGallery from "../../components/Main/ImagesGallery.jsx";
 import "../../components/main/style.css";
 import OurServices from "../../components/Main/OurServices";
-import { TitleI } from "../../components/Main/Title";
 import Maps from "../../components/Main/Maps";
 
 const Home = () => {

@@ -119,7 +119,7 @@ p {
   bottom: -10px;
 }
 .card_iconS p:hover:after {
-  width: 100px;
+  width: 100%;
 }
 /* About Us  */
 .fotito {
@@ -198,4 +198,78 @@ p {
 
 .maps {
   margin-top: 40px;
+}
+
+/* Styles STATE */
+
+.p-stateCont {
+  margin-top: 40px;
+  display: flex;
+  min-width: 80vw;
+  justify-content: center;
+}
+.p-state {
+  width: 50%;
+}
+.select-state {
+  background-color: var(--color-dos);
+  color: #fff;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+.button-state {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.button-box2 {
+  padding: 10px;
+  background-color: var(--color-dos);
+  color: #fff;
+  min-width: 5em;
+  border: none;
+}
+
+/* Card Render */
+
+.card-container {
+  color: #fff;
+  margin: 1em;
+  flex-wrap: wrap;
+  display: flex;
+  min-height: 40vh;
+  min-width: 200px;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-end;
+}
+.card-box {
+  max-width: 30vw;
+  min-width: 250px;
+  height: 100%;
+}
+
+.card-ima {
+  min-height: 250px;
+}
+.card-img {
+  min-height: 100%;
+}
+.card-plus {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.asoaso {
+  background-color: #262626;
+  min-height: 100vh;
+}
+
+/* Formulario */
+
+.cent {
+  margin-top: 50px;
+  color: #fff;
 }

@@ -1,14 +1,14 @@
-import React from 'react'
-import { Navbaar } from '../../components/Main/Navbar'
-
+import React from "react";
+import Form from "../../components/Main/Form";
+import { Navbaar } from "../../components/Main/Navbar";
 
 const Contact = () => {
   return (
-    <>
-    <Navbaar/>
-     <div style={{backgroundColor:"#262626", height: "100vh"}}>Contacto jnjnj</div>
-    </>
-  )
-}
+    <div className="asoaso cent">
+      <Navbaar />
+      <Form />
+    </div>
+  );
+};
 
-export {Contact}
+export { Contact };
