@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
 export const HeroPages = styled.header`
-  background-color: #285437;
+  min-height: 40vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
-  min-height: 50vh;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  color: #fff;
+  flex-wrap: wrap;
+  padding: 20px;
   color: var(--color-p);
-  padding: 3rem 0;
-  background-image: url("../images/banner.jpg") no-repeat center top;
 `;

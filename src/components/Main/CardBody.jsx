@@ -1,5 +1,5 @@
-import React from "react";
-import edimuestra from "../Images/edimuestra.jpg";
+import React, { Children, useState } from "react";
+import descubre from "../Images/descubre.webp";
 import { FaRegBuilding } from "react-icons/fa";
 import { BiStore } from "react-icons/bi";
 import { TbBuilding } from "react-icons/tb";
@@ -10,7 +10,9 @@ import { TitleI } from "./Title";
 import { ContainerI } from "../ContainerI";
 import { DivMio } from "../DivMio";
 
-const CardBody = () => {
+const CardBody = ({ children }) => {
+  const items = React.Children.toArray(children);
+  console.log(items);
   return (
     <>
       <ContainerI>
@@ -38,7 +40,7 @@ const CardBody = () => {
           </div>
         </DivMio>
         <DivMio>
-          <img src={edimuestra} alt="edificio" className="card_img" />
+          <img src={descubre} alt="edificio" className="card_img" />
         </DivMio>
       </ContainerI>
     </>

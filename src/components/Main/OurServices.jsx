@@ -5,7 +5,7 @@ import { TitleI } from "./Title";
 const OurServices = () => {
   return (
     <section className="ourserv-back">
-      <div className="ourserv-box ourserv-back">
+      <div className="ourserv-box ourserv-logo">
         <img src={logo2} alt="logo" className="img-logo" />
       </div>
       <div className="ourserv-box ourserv-cont">

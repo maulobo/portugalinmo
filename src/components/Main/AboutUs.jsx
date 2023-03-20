@@ -1,7 +1,7 @@
 import React from "react";
 import { ContainerI } from "../ContainerI";
 import { DivMio } from "../DivMio";
-import img1 from "../Images/ima1.jpg";
+import aboutus from "../Images/aboutus.webp";
 import "./style.css";
 import { TitleI } from "./Title";
 
@@ -10,9 +10,9 @@ const AboutUs = () => {
     <>
       <ContainerI>
         <DivMio>
-          <img src={img1} alt="edificio1" className="fotito" />
+          <img src={aboutus} alt="edificio1" className="fotito" />
         </DivMio>
-        <DivMio>
+        <DivMio icons3>
           <TitleI green style={{ marginBottom: "3em" }}>
             SOBRE NOSOTROS
           </TitleI>

@@ -13,6 +13,8 @@ export const DivMio = styled.div`
       return "space-between";
     } else if (props.icons2) {
       return "space-around";
+    } else if (props.icons3) {
+      return "center";
     } else {
       return "flex-end";
     }

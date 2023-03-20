@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { ContainerII } from "../../components/ContainerII";
 import { DivMio } from "../../components/DivMio";
 import { HeroPages } from "../../components/Main/HeroPages";
@@ -6,8 +6,9 @@ import { Navbaar } from "../../components/Main/Navbar";
 import state from "../../components/Images/ima1.jpg";
 import { Button } from "../../components/Main/Btns";
 import RenderCard1 from "../../components/Main/RenderCard1";
-import RenderCard2 from "../../components/Main/RenderCard2";
 import { ContainerIII } from "../../components/ContainerIII";
+import { Footer } from "../../components/Main/Footer";
+import { CSSTransition } from "react-transition-group";
 
 const propiedadesMuestra = [
   {
@@ -60,7 +61,7 @@ const propiedadesMuestra = [
     id: 3,
     name: "Casa en Arguello II",
     localization: "Juan Nepper al 6300, Arguello, zona norte, Córdoba capital",
-    kindOfProperty: "departamento",
+    kindOfProperty: "casa",
     antiquity: "30 años",
     operation: "venta",
     surface: "750",
@@ -95,6 +96,8 @@ const StateSale = () => {
   const [local, setLocal] = useState("");
   const [rooms, setRooms] = useState("");
   const [search, setSearch] = useState(false);
+  const nodeRef = useRef(null);
+  const [inProp, setInProp] = useState(false);
 
   const handleSelectTipo = (e) => {
     setTipo(e.target.value);
@@ -111,11 +114,13 @@ const StateSale = () => {
 
   const handleClick = (e) => {
     setSearch(true);
+    setInProp(true);
   };
+
   return (
     <>
       <Navbaar />
-      <HeroPages>
+      <HeroPages className="state-hero">
         <h2>PROPIEDADES EN VENTA</h2>
       </HeroPages>
       <ContainerII className="container-state">
@@ -154,7 +159,7 @@ const StateSale = () => {
               Ubicación
             </option>
             <option value="arguello">Argüello</option>
-            <option value="aguadeoro">Agua de Oro</option>
+            <option value="agua de oro">Agua de Oro</option>
           </select>
           <select
             name="Habitaciones"
@@ -169,20 +174,36 @@ const StateSale = () => {
             <option value="dos">Dos</option>
             <option value="tres">Tres</option>
           </select>
-
-          <Button onClick={handleClick} className="btn-extras">
-            BUSCAR
-          </Button>
+          <div className="state-btn-container">
+            <Button onClick={handleClick} className="btn-extras">
+              BUSCAR
+            </Button>
+            <Button
+              onClick={() => {
+                setSearch(false);
+                setInProp(false);
+              }}
+              className="btn-extras"
+            >
+              BORRAR
+            </Button>
+          </div>
         </DivMio>
       </ContainerII>
-      <ContainerIII>
-        {search &&
-          propiedadesMuestra
-            .filter((el) => el.kindOfProperty.toLowerCase().includes(tipo))
-            .filter((el) => el.localization.toLowerCase().includes(local))
-            .filter((el) => el.room.toLowerCase().includes(rooms))
-            .map((el, id) => {
-              if (el.id % 2 == 0) {
+      <CSSTransition
+        nodeRef={nodeRef}
+        in={inProp}
+        timeout={300}
+        classNames="my-node"
+      >
+        <ContainerIII ref={nodeRef}>
+          VACIO
+          {search &&
+            propiedadesMuestra
+              .filter((el) => el.kindOfProperty.toLowerCase().includes(tipo))
+              .filter((el) => el.localization.toLowerCase().includes(local))
+              .filter((el) => el.room.toLowerCase().includes(rooms))
+              .map((el, id) => {
                 return (
                   <RenderCard1
                     name={el.name}
@@ -190,17 +211,11 @@ const StateSale = () => {
                     key={id}
                   />
                 );
-              } else {
-                return (
-                  <RenderCard2
-                    name={el.name}
-                    description={el.description}
-                    key={id}
-                  />
-                );
-              }
-            })}
-      </ContainerIII>
+              })}
+        </ContainerIII>
+      </CSSTransition>
+
+      <Footer />
     </>
   );
 };

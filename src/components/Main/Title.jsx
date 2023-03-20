@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const TitleI = styled.div`
   color: #fff;
-  font-size: 1.5em;
+  font-size: ${(props) => (props.big ? "3em" : "1.5em")};
   margin: 1rem 0;
   position: relative;
   letter-spacing: 2px;

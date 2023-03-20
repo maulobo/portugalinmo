@@ -1,53 +1,60 @@
 import { ImageList, ImageListItem } from "@mui/material";
 import React from "react";
 import "./style.css";
+import gallery1 from "../Images/gallery1.webp";
+import gallery2 from "../Images/gallery2.webp";
+import gallery3 from "../Images/gallery3.webp";
+import gallery4 from "../Images/gallery4.webp";
+import gallery5 from "../Images/gallery5.webp";
+import gallery6 from "../Images/gallery6.webp";
+import gallery7 from "../Images/gallery7.webp";
+import gallery8 from "../Images/gallery8.webp";
 
 const itemData = [
   {
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-    title: "Breakfast",
+    img: gallery1,
+    title: "Kitchen",
     rows: 2,
     cols: 2,
   },
   {
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-    title: "Burger",
+    img: gallery2,
+    title: "Balcony",
   },
   {
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-    title: "Camera",
+    img: gallery3,
+    title: "Park",
   },
   {
-    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-    title: "Coffee",
+    img: gallery4,
+    title: "Livin",
     cols: 2,
   },
   {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Hats",
+    img: gallery5,
+    title: "Room",
     cols: 2,
   },
   {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-    title: "Honey",
-    author: "@arwinneil",
+    img: gallery6,
+    title: "Front",
     rows: 2,
     cols: 2,
   },
   {
-    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-    title: "Basketball",
+    img: gallery7,
+    title: "Backyard",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-    title: "Fern",
+    img: gallery8,
+    title: "Build",
   },
 ];
 
 const ImagesGallery = () => {
   return (
     <>
-      <ImageList className="una" variant="quilted" cols={4} rowHeight={121}>
+      <ImageList className="una" variant="quilted" cols={4} rowHeight={150}>
         {itemData.map((item) => (
           <ImageListItem
             key={item.img}

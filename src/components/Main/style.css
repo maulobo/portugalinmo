@@ -21,7 +21,7 @@ p {
   background-size: cover;
 }
 .hero-logo {
-  height: 35vh;
+  max-height: 35vh;
 }
 .hero-text {
   font-size: 1.4em;
@@ -31,6 +31,7 @@ p {
   text-align: center;
   margin: 2rem 0rem;
 }
+
 /* NAVBAR */
 .bg-light {
   --bs-bg-opacity: 0;
@@ -65,6 +66,41 @@ p {
   color: #fff;
   padding: 0.6rem;
 }
+
+/* Footer */
+.footer-ajust {
+  margin-top: 30px;
+}
+.footer-container {
+  min-height: 40vh;
+  background: linear-gradient(rgba(0, 38, 0, 0.7), rgba(0, 38, 0, 0.7)),
+    url(../Images/edimuestra.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.footer-info {
+  text-align: center;
+  padding: 20px;
+}
+.footer-logo {
+  padding: 20px;
+  max-height: 150px;
+}
+.footer-container2 {
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+}
+
 /* BODY */
 .main_body {
   background-color: var(--main-body-color);
@@ -123,9 +159,9 @@ p {
 }
 /* About Us  */
 .fotito {
-  height: 75vh;
-  width: 30vh;
-  object-fit: cover;
+  height: 80vh;
+  width: 35vh;
+  object-fit: contain;
 }
 /* Para prop en venta */
 .titulito {
@@ -147,6 +183,10 @@ p {
   height: 10px;
   margin-top: 70px;
 }
+.ajust {
+  margin-top: 50px;
+}
+
 /* Gallery */
 .una {
   background-color: rgba(0, 0, 0, 0.5);
@@ -162,6 +202,8 @@ p {
 /* Our services */
 
 .ourserv-back {
+  margin-top: 40px;
+  background-color: #262626;
   display: flex;
   flex-wrap: wrap;
 }
@@ -171,7 +213,7 @@ p {
   min-width: 350px;
   background-color: #262626;
 }
-.ourserv-back {
+.ourserv-logo {
   background-color: #dbab1e;
   display: flex;
   justify-content: center;
@@ -201,7 +243,10 @@ p {
 }
 
 /* Styles STATE */
-
+.state-hero {
+  background: linear-gradient(rgba(40, 84, 55, 0.7), rgba(40, 84, 55, 0.7)),
+    url(../Images/gallery8.webp);
+}
 .p-stateCont {
   margin-top: 40px;
   display: flex;
@@ -214,8 +259,6 @@ p {
 .select-state {
   background-color: var(--color-dos);
   color: #fff;
-  font-size: 14px;
-  font-family: Arial, sans-serif;
   padding: 10px;
 }
 
@@ -231,7 +274,10 @@ p {
   min-width: 5em;
   border: none;
 }
-
+.state-btn-container {
+  display: flex;
+  gap: 80px;
+}
 /* Card Render */
 
 .card-container {
@@ -243,7 +289,7 @@ p {
   min-width: 200px;
   gap: 40px;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 .card-box {
   max-width: 30vw;
@@ -262,14 +308,83 @@ p {
   flex-direction: column;
   gap: 20px;
 }
-.asoaso {
-  background-color: #262626;
-  min-height: 100vh;
+
+/* Contacto */
+
+.contact-maxCont {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../Images/gallery1.webp);
+  padding-bottom: 40px;
 }
 
-/* Formulario */
-
-.cent {
-  margin-top: 50px;
+.contact-choose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.contact-info {
+  border-radius: 20px;
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 30%;
   color: #fff;
+  background-color: #262626;
+}
+
+.contact-form-container {
+  display: flex;
+  padding: 40px;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-around;
+}
+.form-container {
+  border-radius: 20px;
+  color: #fff;
+  background-color: #262626;
+  min-width: 30%;
+  padding: 40px;
+}
+.ajust2 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 575px) {
+  .hero-logo {
+    height: 20vh !important;
+  }
+}
+
+.my-node-enter {
+  background-color: #dbab1e;
+  opacity: 0.5;
+}
+.my-node-enter-done {
+  opacity: 1;
+  transition: all 1s;
+}
+.my-node-exit {
+  opacity: 0.5;
+  transition: all 1s;
+}
+.my-node-exit-done {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  transition: all 1s;
+}
+
+/* Ajustes del MENU */
+.btn-close {
+  background-image: url(../Images/close.png);
+  background-size: contain;
+}
+.offcanvas-header {
+  justify-content: space-around;
 }
